@@ -6,7 +6,7 @@
     @apply flex items-center justify-center select-none cursor-pointer active:scale-95
   }
   
-  .center {
+.center {
     @apply  items-center justify-center
-  }
+}
   
