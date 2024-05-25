@@ -17,8 +17,9 @@ export default function Contact() {
         <Fragment>
             <div className=" w-full flex flex-col gap-10 p-5 xl:p-10">
                 <div className=" flex justify-between">
-                    <h1 className=" text-2xl font-semibold underline underline-offset-4 select-none">Contact</h1>
-                    <div onClick={openDialog} className=" bg-red-500 font-semibold rounded-xl p-2 button">
+                    <h1 className=" text-2xl font-semibold underline underline-offset-4 select-none"></h1>
+                    
+                    <div onClick={openDialog} className="font-semibold rounded-xl p-2 button" style={{ backgroundColor: "#D83FFB"}}>
                         Add new Contact +
                     </div>
                 </div>

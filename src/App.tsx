@@ -9,12 +9,16 @@ function App() {
     <Router>
       <Header />
       <div className="flex h-screen pt-10">
-        <div className=' w-1/3 bg-black hidden md:block'>
-          <Navigation />
+        
+        
+      <div className="w-1/3 hidden md:block" style={{ backgroundColor: "#F2AE30"}}>
+
+          <Navigation activeRoute={''}/>
         </div>
-        <div className='w-full md:w-2/3 h-full overflow-auto bg-slate-300'>
+        {/* bg-slate-300 */}
+        <div className='w-full md:w-2/3 h-full overflow-auto'style={{ backgroundColor: "#E6E6FA"}}>
           <Routes>
-            <Route path="/" element={<Contact />} />
+            <Route path="/" element={<Contact/>} />
             <Route path="/charts" element={<ChartsAndMap/>} />
           </Routes>
         </div>

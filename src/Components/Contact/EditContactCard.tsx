@@ -81,7 +81,8 @@ const EditContactCard: React.FC<EditContactCardProps> = ({ contact, onSave, onCa
 
   return (
     <Fragment>
-    <div className="bg-white rounded-lg shadow-md p-4 flex flex-col gap-1">
+      
+    <div className="rounded-lg shadow-md p-4 flex flex-col gap-1" style={{ backgroundColor: "#D0FAC4"}}>
     <h1 className=' text-xl font-bold text-black text-center'>Edit Contact</h1>
       <input
         type="text"
@@ -106,6 +107,7 @@ const EditContactCard: React.FC<EditContactCardProps> = ({ contact, onSave, onCa
         name="phone"
         value={editedContact.phone}
         onChange={handleEditChange}
+        pattern="\d{10}"
         className={`mb-2 border rounded p-1 ${validationErrors.phone ? 'border-red-500' : 'border-black'}`}
         placeholder="Phone"
       />

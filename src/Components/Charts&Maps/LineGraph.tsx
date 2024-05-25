@@ -65,8 +65,11 @@ const LineGraph = () => {
   };
 
   return (
+    <div>
+    <div className="text-xl mb-4">COVID-19 Graph</div>
     <div className="p-4 bg-white shadow-md rounded-md">
       <Line data={chartData} options={options} />
+    </div>
     </div>
   );
 };

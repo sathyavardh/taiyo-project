@@ -29,9 +29,12 @@ const ContactList: React.FC = () => {
 
   return (
     <div className=" ">
-      <h2 className="text-3xl font-bold underline underline-offset-2 mb-4">Contact List</h2>
+      <h2 className="text-4xl font-bold mb-2">Contact List</h2>
+
+      <hr className="border-t-2 border-gray-600 my-4" />
+
       {contacts.length === 0 ? (
-        <p className='py-10 text-2xl font-bold'>No contacts available.</p>
+        <p className='py-10 text-2xl font-bold'>No Contacts Available</p>
       ) : (
         <ul>
           {contacts.map((contact) => (

@@ -12,18 +12,19 @@ export default function Header() {
 
     return (
         <Fragment>
-            <header className="flex items-center xl:justify-center justify-start px-4 w-full bg-blue-400 h-10 absolute top-0 gap-5">
-                <div className="hidden xl:block text-2xl font-bold uppercase underline underline-offset-2 ">
+            <header className="flex items-center xl:justify-center justify-start px-5 w-full h-10 absolute top-0 gap-5" style={{ backgroundColor: "#5A98BF" }}>
+                <div className="hidden xl:block text-2xl font-bold uppercase">
                     {getName()}
                 </div>
                 <div className="xl:hidden flex gap-5">
-                <Link to="/" className={`border border-black rounded-lg px-2 ${pathName === "/" ? "bg-yellow-500" : ""}`}>
+                <Link to="/" className={`border border-black rounded-lg px-2 h-3 ${pathName === "/" ? "bg-orange-400" : ""}`}>
                     Contact Page
                 </Link>
-                <Link to="/charts" className={`border border-black rounded-lg px-2 ${pathName === "/charts" ? "bg-yellow-500" : ""}`}>
+                <Link to="/charts" className={`border border-black rounded-lg px-2 h-3 ${pathName === "/charts" ? "bg-yellow-500" : ""}`}>
                     Charts and Map
                 </Link>
                 </div>
+
             </header>
         </Fragment>
     );
