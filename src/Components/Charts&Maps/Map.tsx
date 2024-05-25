@@ -32,8 +32,8 @@ const Map: React.FC = () => {
   if (!data) return <p>No data available</p>;
 
   const icon = L.icon({
-    // iconUrl: 'https://ucarecdn.com/59f361f8-bd2b-4fed-9e35-aadab16e99d4/marker.png',
-    iconUrl:'public/icon/marker-icon.png',
+    iconUrl: 'https://ucarecdn.com/59f361f8-bd2b-4fed-9e35-aadab16e99d4/marker.png',
+    // iconUrl:'public/icon/marker-icon.png',
   });
 
   return (
