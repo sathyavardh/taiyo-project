@@ -3,10 +3,29 @@
 @tailwind utilities;
 
 .button {
-    @apply flex items-center justify-center select-none cursor-pointer active:scale-95
-  }
-  
-.center {
-    @apply  items-center justify-center
+  @apply flex items-center justify-center select-none cursor-pointer active:scale-95
 }
-  
+
+.center {
+  @apply  items-center justify-center
+}
+
+.modal::backdrop {
+  opacity: 0.9;
+  background-color: black;
+}
+
+
+.loader {
+  border-top-color: #3498db;
+  animation: spinner 1.5s linear infinite;
+}
+
+@keyframes spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

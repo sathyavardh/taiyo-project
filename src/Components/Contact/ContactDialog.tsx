@@ -69,8 +69,7 @@ export default function ContactDialog({ closeDialog }: ContactDialogProps) {
                         value={phone}
                         onChange={(e) => setPhone(e.target.value)}
                         className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                        required
-                    />
+                        required/>
                 </div>
                 <div className="mb-4">
                     <label className="block text-gray-700 text-sm font-bold mb-2">
@@ -79,8 +78,7 @@ export default function ContactDialog({ closeDialog }: ContactDialogProps) {
                     <select
                         value={state}
                         onChange={(e) => setState(e.target.value as 'Active' | 'Inactive')}
-                        className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                    >
+                        className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
                         <option value="Active">Active</option>
                         <option value="Inactive">Inactive</option>
                     </select>

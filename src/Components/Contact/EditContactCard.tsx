@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { Fragment, useState } from 'react';
 import { Contact } from '../../slice/contactSlice';
 
 interface EditContactCardProps {
@@ -80,13 +80,15 @@ const EditContactCard: React.FC<EditContactCardProps> = ({ contact, onSave, onCa
   };
 
   return (
+    <Fragment>
     <div className="bg-white rounded-lg shadow-md p-4 flex flex-col gap-1">
+    <h1 className=' text-xl font-bold text-black text-center'>Edit Contact</h1>
       <input
         type="text"
         name="name"
         value={editedContact.name}
         onChange={handleEditChange}
-        className={`mb-2 border rounded p-1 ${validationErrors.name ? 'border-red-500' : ''}`}
+        className={`mb-2 border  rounded p-1 ${validationErrors.name ? 'border-red-500' : 'border-black'}`}
         placeholder="Name"
       />
       {validationErrors.name && <span className="text-red-500 text-sm">{validationErrors.name}</span>}
@@ -95,7 +97,7 @@ const EditContactCard: React.FC<EditContactCardProps> = ({ contact, onSave, onCa
         name="email"
         value={editedContact.email}
         onChange={handleEditChange}
-        className={`mb-2 border rounded p-1 ${validationErrors.email ? 'border-red-500' : ''}`}
+        className={`mb-2 border rounded p-1 ${validationErrors.email ? 'border-red-500' : 'border-black'}`}
         placeholder="Email"
       />
       {validationErrors.email && <span className="text-red-500 text-sm">{validationErrors.email}</span>}
@@ -104,7 +106,7 @@ const EditContactCard: React.FC<EditContactCardProps> = ({ contact, onSave, onCa
         name="phone"
         value={editedContact.phone}
         onChange={handleEditChange}
-        className={`mb-2 border rounded p-1 ${validationErrors.phone ? 'border-red-500' : ''}`}
+        className={`mb-2 border rounded p-1 ${validationErrors.phone ? 'border-red-500' : 'border-black'}`}
         placeholder="Phone"
       />
       {validationErrors.phone && <span className="text-red-500 text-sm">{validationErrors.phone}</span>}
@@ -112,7 +114,7 @@ const EditContactCard: React.FC<EditContactCardProps> = ({ contact, onSave, onCa
         name="state"
         value={editedContact.state}
         onChange={handleEditChange}
-        className={`mb-2 border rounded p-1 ${validationErrors.state ? 'border-red-500' : ''}`}
+        className={`mb-2 border rounded p-1 ${validationErrors.state ? 'border-red-500' : 'border-black'}`}
       >
         <option value="">Select state</option>
         <option value="Active">Active</option>
@@ -124,6 +126,7 @@ const EditContactCard: React.FC<EditContactCardProps> = ({ contact, onSave, onCa
         <button onClick={onCancel} className="bg-gray-500 hover:bg-gray-600 text-white px-2 py-1 rounded">Cancel</button>
       </div>
     </div>
+    </Fragment>
   );
 };
 
