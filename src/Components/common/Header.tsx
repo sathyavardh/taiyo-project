@@ -12,7 +12,7 @@ export default function Header() {
 
     return (
         <Fragment>
-            <header className="flex items-center xl:justify-center justify-start px-5 w-full h-10 absolute top-0 gap-5" style={{ backgroundColor: "#5A98BF" }}>
+            <header className="flex items-center xl:justify-center justify-start px-5 w-full h-20 absolute top-0 gap-5" style={{ backgroundColor: "#5A98BF" }}>
                 <div className="hidden xl:block text-2xl font-bold uppercase">
                     {getName()}
                 </div>

@@ -8,7 +8,7 @@ function App() {
   return (
     <Router>
       <Header />
-      <div className="flex h-screen pt-10">
+      <div className="flex h-screen pt-20">
         
         
       <div className="w-1/3 hidden md:block" style={{ backgroundColor: "#F2AE30"}}>
